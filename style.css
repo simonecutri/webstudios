@@ -1,9 +1,30 @@
 video{
 	height: 96vh;
 	width: auto;
-	overflow: hidden;
+	margin: 0 auto;
 }
 
 body {
 	background: black;
+}
+
+marquee {
+	height: 10vh;
+	background-color: black;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+
+}
+@font-face {
+	font-family: "ff";
+	src: url(AtlasGrotesk-Light.otf);
+}
+
+p{
+	color: white;
+	font-size: 2em;
+	font-family: "ff";
+	margin-top: 0.50em;
+	float: left;
 }
