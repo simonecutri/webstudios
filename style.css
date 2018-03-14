@@ -1,30 +1,43 @@
 video{
-	height: 96vh;
-	width: auto;
+	width: 100vw;
 	margin: 0 auto;
+	position: fixed;
+	z-index: 1;
 }
 
 body {
 	background: black;
+	grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-marquee {
-	height: 10vh;
-	background-color: black;
-	position: fixed;
-	bottom: 0;
-	width: 100vw;
 
-}
 @font-face {
 	font-family: "ff";
 	src: url(AtlasGrotesk-Light.otf);
 }
 
-p{
-	color: white;
+img{
+	position: fixed;
+	z-index: 2;
+	margin: 0 ;
+	width: 100vw;
+	height: auto;
+}
+
+#marquee {
+   	background-color: black;
+   	height: 8vh;
+   	overflow:hidden;
+  	white-space: nowrap;
+   	color: white;
 	font-size: 2em;
 	font-family: "ff";
-	margin-top: 0.50em;
-	float: left;
-}
+	position: fixed;
+	bottom: 0;
+	z-index: 3;
+ }
+
+ p{
+ 	margin-top: 0.3em;
+ 	float: left;
+ }

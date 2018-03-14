@@ -5,16 +5,42 @@
 
 <link rel="stylesheet" href="style.css" />
 
+<script type="text/javascript">
+	window.addEventListener('load', function () {
+	function go() {
+		i = i < width ? i + step : 6;
+		m.style.marginLeft = -i + 'px';
+	}
+	var i = 1,
+		step = 2,
+		space = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+	var m = document.getElementById('marquee');
+	var t = m.innerHTML; //text
+	m.innerHTML = t + space;
+	m.style.position = 'absolute'; // http://stackoverflow.com/questions/2057682/determine-pixel-length-of-string-in-javascript-jquery/2057789#2057789
+	var width = (m.clientWidth + 1);
+	m.style.position = '';
+	m.innerHTML = t + space + t + space + t + space + t + space + t + space + t + space + t + space;
+	m.addEventListener('mouseenter', function () {
+		step = 0;
+	}, true);
+	m.addEventListener('mouseleave', function () {
+		step = 3;
+	}, true);
+	var x = setInterval(go, 50);
+}, true);
+</script>
+
 </head>
 <body>
 
-<marquee> 
-	<p> Open Studios </p>  
-	<p style="margin-left: 1.5em;">  Yale School of Art </p> 
-	<p style="margin-left: 1.5em;"> April 7—8, 12—6pm </p> 
-	<p style="margin-left: 1.5em;"> 1156 Chapel, 353 Crown, 32 Edgewood, New Haven,CT </p> 
-</marquee> 
 
+
+<div id="marquee">
+	 <p> Open Studios Yale School of Art April 7—8, 12—6pm  1156 Chapel, 353 Crown, 32 Edgewood, New Haven, CT  </p>
+</div> 
+
+<img src="grid-01.svg">
 <video src="def.mp4" preload autoplay loop>
 </video>
 
