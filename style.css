@@ -15,13 +15,20 @@ body {
 	font-family: "ff";
 	src: url(AtlasGrotesk-Light.otf);
 }
-
 img{
+	width: auto;
+	position: absolute;
+	z-index: 10;
+	height: 30px;
+	top: 2%;
+	left: 0;
+}
+.gr{
 	position: fixed;
 	z-index: 2;
 	margin: 0 ;
+	height: 100vh;
 	width: 100vw;
-	height: auto;
 }
 
 #marquee {
